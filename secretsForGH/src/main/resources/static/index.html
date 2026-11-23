@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vuln Demo</title>
+</head>
+<body>
+  <h1>Intentionally Vulnerable Demo App</h1>
+
+  <h2>SQL Injection</h2>
+  <form action="/api/search" method="get">
+    Name <input type="text" name="name">
+    <button type="submit">Search</button>
+  </form>
+
+  <h2>Command Injection</h2>
+  <form action="/api/exec" method="get">
+    Command <input type="text" name="cmd">
+    <button type="submit">Run</button>
+  </form>
+
+  <h2>Path Traversal</h2>
+  <form action="/api/file" method="get">
+    Path <input type="text" name="path">
+    <button type="submit">Read</button>
+  </form>
+</body>
+</html>
